@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 
 
 //connect to database
-mongoose.connect(process.env.DB_URL || 'mongodb://127.0.0.1:27017/product')
+mongoose.connect(process.env.DB_URL || 'mongodb+srv://<db_username>:<db_password>@cluster1.ggujav4.mongodb.net/?appName=Cluster1')
     .then(() => {
         console.log('connected to database');
     }).catch((err) => {
