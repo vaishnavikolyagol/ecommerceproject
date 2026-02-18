@@ -27,7 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-
+//task 0 -> root route
+app.get('/', (req, res) => {
+    res.redirect('/products');
+})
 //task 1 ->to display all the products
 app.get('/products', async (req, res) => {
     const products = await Product.find({});
